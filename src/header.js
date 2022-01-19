@@ -9,7 +9,7 @@ function createHeader() {
 
     const title_box = document.createElement('div');
         title_box.classList.add('title');
-        title_box.innerText = 'Holy Crepe';
+        title_box.innerText = 'Bear Grillz';
 
     const nav_bar = document.createElement('ul');
         nav_bar.classList.add('nav_bar');
@@ -20,11 +20,11 @@ function createHeader() {
     const menu = document.createElement('li');
         menu.innerText = 'Menu';
         //addEventListener('click', goToMenu());
-    const reviews = document.createElement('li');
-        reviews.innerText = 'Reviews';
+    const booking = document.createElement('li');
+        booking.innerText = 'Booking';
         //addEventListener('click', goToReveiws());
 
-    nav_bar.append(home, menu, reviews);
+    nav_bar.append(home, menu, booking);
     container.append(title_box, nav_bar);
     div.appendChild(container);
 
