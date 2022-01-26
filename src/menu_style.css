@@ -1,0 +1,43 @@
+
+.body_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-width: 300px;
+    
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    
+    margin: 1em 0 1em 0;
+    padding: 1em 1em;
+    border: 2px solid white;
+    border-radius: .5em;
+    color: whitesmoke;
+    background-color: rgba(20, 20, 20, .95);
+}
+.menu_row:nth-child(1) {
+    padding: 0 0 1em 40%;
+    font: 2em Cambria ;
+}
+.menu_row {
+    display: flex;
+    width: 100%;
+    padding: 0.5em 0 0.5em 1em;
+} 
+
+.column {
+    display: flex;
+    width: 50%;
+}
+
+.column:nth-child(even) {
+    padding-left: 15%;
+}
+
