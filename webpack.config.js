@@ -5,10 +5,9 @@ module.exports = {
     mode: 'production',
     entry: {
         index: './src/header.js',
-        home: './src/create_body.js',
     },
     output: {
-        filename: '[name].main.js',
+        filename: 'index.js',
         path: path.resolve(__dirname, 'dist'), 
     },
     module: {
