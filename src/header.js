@@ -1,5 +1,9 @@
 
 import './header_style.css';
+import './menu_style.css';
+import './home_style.css';
+import './contacts_style.css';
+import createBody from './create_body';
 
 function createHeader() {
     const div = document.body.querySelector('#content');
@@ -14,21 +18,22 @@ function createHeader() {
     const nav_bar = document.createElement('ul');
         nav_bar.classList.add('nav_bar');
 
-    const home = document.createElement('li');
+    const home = document.createElement('button');
         home.innerText = 'Home';
-        //addEventListener('click', goToHomePage());
-    const menu = document.createElement('li');
-        menu.innerText = 'Menu';
-        //addEventListener('click', goToMenu());
-    const booking = document.createElement('li');
-        booking.innerText = 'Booking';
-        //addEventListener('click', goToReveiws());
+        home.addEventListener('click', () => createBody.createBody(home.innerText));
 
-    nav_bar.append(home, menu, booking);
+    const menu = document.createElement('button');
+        menu.innerText = 'Menu';
+        menu.addEventListener('click', () => createBody.createBody(menu.innerText));
+
+    const contact = document.createElement('button');
+        contact.innerText = 'Contacts';
+        contact.addEventListener('click', () => createBody.createBody(contact.innerText));
+
+    nav_bar.append(home, menu, contact);
     container.append(title_box, nav_bar);
     div.appendChild(container);
-
-    return div;
+    createBody.createBody('Home');
 }
 
-document.body.appendChild(createHeader());
+createHeader();
